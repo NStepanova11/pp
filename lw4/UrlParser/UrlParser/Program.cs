@@ -70,7 +70,7 @@ namespace UrlParser
             return currencyList;
         }
 
-        static async Task SaveInfoAboutValutes()
+        static async Task SaveInfoAboutValutesAsync()
         {
             List<currency> valutes = GetJsonFromUrl().Result;
             using (StreamWriter sw = new StreamWriter("out.txt"))
@@ -89,7 +89,7 @@ namespace UrlParser
         {
             ReadValutesAcync();
             //GetJsonStringFromUrl();
-            SaveInfoAboutValutes();
+            SaveInfoAboutValutesAsync();
             Console.Read();
         }
     }
